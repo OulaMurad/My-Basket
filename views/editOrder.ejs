@@ -1,0 +1,135 @@
+
+<%- include('_layouts/header')  -%>
+
+<main>
+
+    <section>
+        <p></p>
+        <h1>Edit Order</h1>
+        <p></p>
+
+        <form method="post"action="/allorders/edit/<%= order._id %>">
+            <p>
+            <div class="form-field">
+                <label for="carrots">carrots:</label>
+                <input type="number" class="form-input" name="carrots" value="<%= order.carrots %>"></p>
+            </div>
+            <p>
+                <div class="form-field">
+                    <label for="lemon">lemon:</label>
+                    <input type="number" class="form-input" name="lemon" value="<%= order.lemon %>"></p>
+                </div>
+            <p>
+            <div class="form-field">
+                <label for="apple">apple:</label>
+                <input type="number" class="form-input" name="apple" value="<%= order.apple %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="whitePotato">white Potato:</label>
+                <input type="number" class="form-input" name="whitePotato" value="<%= order.whitePotato %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="melon">Red Potato:</label>
+                <input type="number" class="form-input" name="melon" value="<%= order.melon %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="redPepper">Red Pepper:</label>
+                <input type="number" class="form-input" name="redPepper" value="<%= order.redPepper %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="yellowPepper">yellow Pepper:</label>
+                <input type="number" class="form-input" name="yellowPepper" value="<%= order.yellowPepper %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="kiwi">kiwi:</label>
+                <input type="number" class="form-input" name="kiwi" value="<%= order.kiwi %>">
+                </p>
+            </div>
+
+            <div class="form-field">
+                <label for="flatCabbage">flatCabbage:</label>
+                <input type="number" class="form-input" name="flatCabbage" value="<%= order.flatCabbage %>">
+                </p>
+            </div>
+
+            <div class="form-field">
+                <label for="orange">orange:</label>
+                <input type="number" class="form-input" name="orange" value="<%= order.orange %>">
+                </p>
+            </div>
+
+            <div class="form-field">
+                <label for="banana">banana:</label>
+                <input type="number" class="form-input" name="banana" value="<%= order.banana %>">
+                </p>
+            </div>
+
+            <div class="form-field">
+                <label for="eggPlant">eggPlant:</label>
+                <input type="number" class="form-input" name="eggPlant" value="<%= order.eggPlant %>">
+                </p>
+            </div>
+
+            <div class="form-field">
+                <label for="mango">mango:</label>
+                <input type="number" class="form-input" name="mango" value="<%= order.mango %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="whiteCarrot">whiteCarrot:</label>
+                <input type="number" class="form-input" name="whiteCarrot" value="<%= order.whiteCarrot %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="pomegranate">pomegranate:</label>
+                <input type="number" class="form-input" name="pomegranate" value="<%= order.pomegranate %>">
+                </p>
+            </div>
+            <div class="form-field">
+                <label for="delivery">Delivery Time:</label>
+                <select name="delivery" id="delivery" value="<%= order.delivery %>">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br />
+                </p>
+            </div>
+            <p>
+                <div class="form-field">
+                    <label for="subtotal">subtotal:</label>
+                    <input type="text" class="form-input" name="subtotal" value="<%= order.subtotal %>">>
+                    </p>
+                </div>
+                <div class="form-field">
+                    <label for="tax">tax:</label>
+                    <input type="text" class="form-input" name="tax" value="<%= order.tax %>">>
+                    </p>
+                </div>
+                <div class="form-field">
+                    <label for="total">total:</label>
+                    <input type="text" class="form-input" name="total" value="<%= order.total %>">>
+                    </p>
+                </div>
+            <div class="form-field">
+                <input type="submit" class="form-submit" value="submit">
+                </p>
+            </div>
+        </form>
+    </section>
+</main>
+<% if(typeof errors !== 'undefined'){
+    for(var error of errors){
+        %>
+<h3><%= error.msg %></h3>
+<%
+    }
+}
+%>
+
+<%- include('_layouts/footer') -%>

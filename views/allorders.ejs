@@ -1,0 +1,62 @@
+<h2>Hi Admin <%= user.name %></h2>
+
+<%- include('_layouts/header') -%>
+<main>
+    <h1>List of Order: </h1>
+    <table class="contact-list">
+        <thead>
+            <th>carrots</th>
+            <th>lemon</th>
+            <th>apple</th>
+            <th>whitePotato</th>
+            <th>melon</th>
+            <th>redPepper</th>
+            <th>yellowPepper</th>
+            <th>kiwi</th>
+            <th>flatCabbage</th>
+            <th>orange</th>
+            <th>banana</th>
+            <th>eggPlant</th>
+            <th>mango</th>
+            <th>whiteCarrot</th>
+            <th>pomegranate</th>
+            <th>delivery</th>
+            <th>subtotal</th>
+            <th>tax</th>
+            <th>total</th>
+            <th colspan="2">Manage</th>
+        </thead>
+        <tbody>
+            <% contacts.forEach(function(contact){
+                %>
+            <tr>
+                <td><%= contact.carrots %></td>
+                <td><%= contact.lemon %></td>
+                <td><%= contact.apple %></td>
+                <td><%= contact.whitePotato %></td>
+                <td><%= contact.melon %></td>
+                <td><%= contact.redPepper %></td>
+                <td><%= contact.yellowPepper %></td>
+                <td><%= contact.kiwi %></td>
+                <td><%= contact.flatCabbage %></td>
+                <td><%= contact.orange %></td>
+                <td><%= contact.banana %></td>
+                <td><%= contact.eggPlant %></td>
+                <td><%= contact.mango %></td>
+                <td><%= contact.whiteCarrot %></td>
+                <td><%= contact.pomegranate %></td>
+                <td><%= contact.delivery %></td>
+                <td><%= contact.subtotal %></td>
+                <td><%= contact.tax %></td>
+                <td><%= contact.total %></td>
+
+                <td><a href="/allorders/edit/<%= contact._id %>">Edit</a></td>
+                <td><a href="/allorders/delete/<%= contact._id %>">Delete</a></td>
+             
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</section>
+</main>
+<%- include('_layouts/footer') -%>
